@@ -66,11 +66,13 @@ const car = {
       console.log(`My car is a ${car.displayInfo()}, and it is ${car.age(currentYear)} years old.`);
 
    },
-   age:function(currentyear){
-      return currentyear-this.year;
-   }
-};
-
-
+ };
+function age(car){
+   let currentYear= new Date().getFullYear();
+   car.age = (currentYear-car.year);
+   return car
+}
+console.log(age(car));
+car.displayInfo();
 
 
